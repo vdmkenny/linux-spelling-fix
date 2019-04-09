@@ -45,7 +45,7 @@
  * the data portion is mmap()'ed.
  *
  * To sort the queues in chronological order, all queue access is controlled
- * by the auxtrace_heap. This is basicly a stack, each stack element has two
+ * by the auxtrace_heap. This is basically a stack, each stack element has two
  * entries, the queue number and a time stamp. However the stack is sorted by
  * the time stamps. The highest time stamp is at the bottom the lowest
  * (nearest) time stamp is at the top. That sort order is maintained at all

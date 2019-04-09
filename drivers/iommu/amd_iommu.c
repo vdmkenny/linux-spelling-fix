@@ -2800,7 +2800,7 @@ static int init_reserved_iova_ranges(void)
 
 	/*
 	 * Memory used for PCI resources
-	 * FIXME: Check whether we can reserve the PCI-hole completly
+	 * FIXME: Check whether we can reserve the PCI-hole completely
 	 */
 	for_each_pci_dev(pdev) {
 		int i;

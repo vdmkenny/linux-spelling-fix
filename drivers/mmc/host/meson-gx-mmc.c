@@ -274,7 +274,7 @@ static int meson_mmc_clk_set_phase(struct clk_hw *hw, int degrees)
 					 clk_get_rate(hw->clk));
 
 		/* First compute the phase index (p), the remainder (r) is the
-		 * part we'll try to acheive using the delays (d).
+		 * part we'll try to achieve using the delays (d).
 		 */
 		r = do_div(p, 360 / phase_num);
 		d = DIV_ROUND_CLOSEST(r * period_ps,

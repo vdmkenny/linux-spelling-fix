@@ -1969,7 +1969,7 @@ static void ip_mr_forward(struct net *net, struct mr_table *mrt,
 	if (c->mfc_origin == htonl(INADDR_ANY) && true_vifi >= 0) {
 		struct mfc_cache *cache_proxy;
 
-		/* For an (*,G) entry, we only check that the incomming
+		/* For an (*,G) entry, we only check that the incoming
 		 * interface is part of the static tree.
 		 */
 		cache_proxy = mr_mfc_find_any_parent(mrt, vif);

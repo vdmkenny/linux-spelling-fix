@@ -1777,7 +1777,7 @@ xlog_cksum(
  * during unmount. We might be processing a shutdown triggered during unmount,
  * and that can occur asynchronously to the unmount thread, and hence we need to
  * ensure that completes before tearing down the iclogbufs. Hence we need to
- * hold the buffer lock across the log IO to acheive that.
+ * hold the buffer lock across the log IO to achieve that.
  */
 STATIC int
 xlog_bdstrat(

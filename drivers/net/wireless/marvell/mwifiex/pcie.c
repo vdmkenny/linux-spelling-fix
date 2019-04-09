@@ -1237,7 +1237,7 @@ static int mwifiex_pcie_send_data_complete(struct mwifiex_adapter *adapter)
  * are filled with payload length and payload type. Then this payload
  * is mapped to PCI device memory. Tx ring pointers are advanced accordingly.
  * Download ready interrupt to FW is deffered if Tx ring is not full and
- * additional payload can be accomodated.
+ * additional payload can be accommodated.
  * Caller must ensure tx_param parameter to this function is not NULL.
  */
 static int

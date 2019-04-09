@@ -290,7 +290,7 @@ struct sst_hsw_ipc_debug_log_enable_req {
 
 /* Debug Dump Log Reply */
 struct sst_hsw_ipc_debug_log_reply {
-	u32 log_buffer_begining;
+	u32 log_buffer_beginning;
 	u32 log_buffer_size;
 } __attribute__((packed));
 

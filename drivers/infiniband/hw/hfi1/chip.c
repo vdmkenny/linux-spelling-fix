@@ -9356,7 +9356,7 @@ static int set_local_link_attributes(struct hfi1_pportdata *ppd)
 	/*
 	 * An external device configuration request is used to reset the LCB
 	 * to retry to obtain operational lanes when the first attempt is
-	 * unsuccesful.
+	 * unsuccessful.
 	 */
 	if (dd->dc8051_ver >= dc8051_ver(1, 25, 0))
 		misc_bits |= 1 << EXT_CFG_LCB_RESET_SUPPORTED_SHIFT;

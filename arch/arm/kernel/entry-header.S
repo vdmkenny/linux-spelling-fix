@@ -76,7 +76,7 @@
 	.macro	v7m_exception_entry
 	@ determine the location of the registers saved by the core during
 	@ exception entry. Depending on the mode the cpu was in when the
-	@ exception happend that is either on the main or the process stack.
+	@ exception happened that is either on the main or the process stack.
 	@ Bit 2 of EXC_RETURN stored in the lr register specifies which stack
 	@ was used.
 	tst	lr, #EXC_RET_STACK_MASK

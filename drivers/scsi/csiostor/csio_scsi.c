@@ -943,7 +943,7 @@ csio_scsis_aborting(struct csio_ioreq *req, enum csio_scsi_ev evt)
 		 * 5. FW couldnt genuinely abort the request for some reason,
 		 *    and sent us an error.
 		 *
-		 * The first 3 scenarios are treated as  succesful abort
+		 * The first 3 scenarios are treated as  successful abort
 		 * operations by the host, while the last 2 are failed attempts
 		 * to abort. Manipulate the return value of the request
 		 * appropriately, so that host can convey these results

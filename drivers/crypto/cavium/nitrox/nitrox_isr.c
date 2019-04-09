@@ -400,7 +400,7 @@ void nitrox_sriov_unregister_interrupts(struct nitrox_device *ndev)
 	pci_disable_msix(pdev);
 }
 
-int nitrox_sriov_register_interupts(struct nitrox_device *ndev)
+int nitrox_sriov_register_interrupts(struct nitrox_device *ndev)
 {
 	struct pci_dev *pdev = ndev->pdev;
 	struct nitrox_q_vector *qvec;

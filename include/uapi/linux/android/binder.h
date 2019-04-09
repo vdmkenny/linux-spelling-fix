@@ -232,7 +232,7 @@ struct binder_node_info_for_ref {
  * NOTE: Two special error codes you should check for when calling
  * in to the driver are:
  *
- * EINTR -- The operation has been interupted.  This should be
+ * EINTR -- The operation has been interrupted.  This should be
  * handled by retrying the ioctl() until a different error code
  * is returned.
  *

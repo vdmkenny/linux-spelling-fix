@@ -1608,7 +1608,7 @@ nvme_fc_fcpio_done(struct nvmefc_fcp_req *req)
 		status = cpu_to_le16(NVME_SC_INTERNAL << 1);
 
 	/*
-	 * For the linux implementation, if we have an unsuccesful
+	 * For the linux implementation, if we have an unsuccessful
 	 * status, they blk-mq layer can typically be called with the
 	 * non-zero status and the content of the cqe isn't important.
 	 */

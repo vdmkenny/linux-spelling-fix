@@ -163,7 +163,7 @@ unqueue:
 
 		/*
 		 * We can only fail the cmpxchg() racing against an unlock(),
-		 * in which case we should observe @node->locked becomming
+		 * in which case we should observe @node->locked becoming
 		 * true.
 		 */
 		if (smp_load_acquire(&node->locked))

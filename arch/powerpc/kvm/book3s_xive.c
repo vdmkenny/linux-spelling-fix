@@ -569,7 +569,7 @@ static int xive_target_interrupt(struct kvm *kvm,
 
 /*
  * Targetting rules: In order to avoid losing track of
- * pending interrupts accross mask and unmask, which would
+ * pending interrupts across mask and unmask, which would
  * allow queue overflows, we implement the following rules:
  *
  *  - Unless it was never enabled (or we run out of capacity)
@@ -1612,7 +1612,7 @@ static int xive_set_source(struct kvmppc_xive *xive, long irq, u64 addr)
 	/*
 	 * Now, we select a target if we have one. If we don't we
 	 * leave the interrupt untargetted. It means that an interrupt
-	 * can become "untargetted" accross migration if it was masked
+	 * can become "untargetted" across migration if it was masked
 	 * by set_xive() but there is little we can do about it.
 	 */
 

@@ -59,7 +59,7 @@ ENTRY(res_service)
 	lr 	r3, [CTOP_AUX_CORE_ID]
 	sr	r3, [CTOP_AUX_LOGIC_CORE_ID]
 	lr	r3, [CTOP_AUX_CLUSTER_ID]
-	; Set logical is acheived by swap of 2 middle bits of cluster id (4 bit)
+	; Set logical is achieved by swap of 2 middle bits of cluster id (4 bit)
 	; r3 is used since we use short instruction and we need q-class reg
 	.short	CTOP_INST_MOV2B_FLIP_R3_B1_B2_INST
 	.word 	CTOP_INST_MOV2B_FLIP_R3_B1_B2_LIMM

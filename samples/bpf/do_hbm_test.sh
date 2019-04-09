@@ -100,7 +100,7 @@ function start_hbm () {
 processArgs () {
   for i in $args ; do
     case $i in
-    # Support for upcomming ingress rate limiting
+    # Support for upcoming ingress rate limiting
     #in)         # support for upcoming ingress rate limiting
     #  dir="-i"
     #  dir_name="in"
@@ -128,7 +128,7 @@ processArgs () {
     -E)
      ecn=1
      ;;
-    # Support for upcomming fq Early Departure Time egress rate limiting
+    # Support for upcoming fq Early Departure Time egress rate limiting
     #--edt)
     # prog="hbm_out_edt_kern.o"
     # qdisc="fq"

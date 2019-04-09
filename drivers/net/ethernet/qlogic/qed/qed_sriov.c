@@ -629,7 +629,7 @@ int qed_iov_hw_info(struct qed_hwfn *p_hwfn)
 	if (rc)
 		return rc;
 
-	/* We want PF IOV to be synonemous with the existance of p_iov_info;
+	/* We want PF IOV to be synonemous with the existence of p_iov_info;
 	 * In case the capability is published but there are no VFs, simply
 	 * de-allocate the struct.
 	 */

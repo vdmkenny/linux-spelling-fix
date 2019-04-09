@@ -6528,7 +6528,7 @@ static u32 gen6_rps_pm_mask(struct drm_i915_private *dev_priv, u8 val)
 	struct intel_rps *rps = &dev_priv->gt_pm.rps;
 	u32 mask = 0;
 
-	/* We use UP_EI_EXPIRED interupts for both up/down in manual mode */
+	/* We use UP_EI_EXPIRED interrupts for both up/down in manual mode */
 	if (val > rps->min_freq_softlimit)
 		mask |= GEN6_PM_RP_UP_EI_EXPIRED | GEN6_PM_RP_DOWN_THRESHOLD | GEN6_PM_RP_DOWN_TIMEOUT;
 	if (val < rps->max_freq_softlimit)

@@ -116,7 +116,7 @@ struct auo_pixcir_ts {
 	const struct auo_pixcir_ts_platdata *pdata;
 	char			phys[32];
 
-	/* special handling for touch_indicate interupt mode */
+	/* special handling for touch_indicate interrupt mode */
 	bool			touch_ind_mode;
 
 	wait_queue_head_t	wait;

@@ -2399,7 +2399,7 @@ void rtl8821ae_card_disable(struct ieee80211_hw *hw)
 
 		/* 3 <3> Hw Configutations */
 
-		/* Wait untill Rx DMA Finished before host sleep.
+		/* Wait until Rx DMA Finished before host sleep.
 		 * FW Pause Rx DMA may happens when received packet doing dma.
 		 */
 		rtl_write_byte(rtlpriv, REG_RXDMA_CONTROL, BIT(2));

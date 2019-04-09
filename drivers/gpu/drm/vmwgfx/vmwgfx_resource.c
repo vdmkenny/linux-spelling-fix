@@ -596,7 +596,7 @@ out_no_unbind:
  * @res: The resource to make visible to the device.
  * @intr: Perform waits interruptible if possible.
  *
- * On succesful return, any backup DMA buffer pointed to by @res->backup will
+ * On successful return, any backup DMA buffer pointed to by @res->backup will
  * be reserved and validated.
  * On hardware resource shortage, this function will repeatedly evict
  * resources of the same type until the validation succeeds.

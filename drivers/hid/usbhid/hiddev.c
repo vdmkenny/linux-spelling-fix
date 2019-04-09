@@ -235,20 +235,20 @@ static int hiddev_release(struct inode * inode, struct file * file)
 	list_del(&list->node);
 	spin_unlock_irqrestore(&list->hiddev->list_lock, flags);
 
-	mutex_lock(&list->hiddev->existancelock);
+	mutex_lock(&list->hiddev->existencelock);
 	if (!--list->hiddev->open) {
 		if (list->hiddev->exist) {
 			hid_hw_close(list->hiddev->hid);
 			hid_hw_power(list->hiddev->hid, PM_HINT_NORMAL);
 		} else {
-			mutex_unlock(&list->hiddev->existancelock);
+			mutex_unlock(&list->hiddev->existencelock);
 			kfree(list->hiddev);
 			vfree(list);
 			return 0;
 		}
 	}
 
-	mutex_unlock(&list->hiddev->existancelock);
+	mutex_unlock(&list->hiddev->existencelock);
 	vfree(list);
 
 	return 0;
@@ -296,7 +296,7 @@ static int hiddev_open(struct inode *inode, struct file *file)
 	list_add_tail(&list->node, &hiddev->list);
 	spin_unlock_irq(&list->hiddev->list_lock);
 
-	mutex_lock(&hiddev->existancelock);
+	mutex_lock(&hiddev->existencelock);
 	if (!list->hiddev->open++)
 		if (list->hiddev->exist) {
 			struct hid_device *hid = hiddev->hid;
@@ -307,12 +307,12 @@ static int hiddev_open(struct inode *inode, struct file *file)
 			if (res < 0)
 				goto bail_normal_power;
 		}
-	mutex_unlock(&hiddev->existancelock);
+	mutex_unlock(&hiddev->existencelock);
 	return 0;
 bail_normal_power:
 	hid_hw_power(hid, PM_HINT_NORMAL);
 bail_unlock:
-	mutex_unlock(&hiddev->existancelock);
+	mutex_unlock(&hiddev->existencelock);
 bail:
 	file->private_data = NULL;
 	vfree(list);
@@ -617,7 +617,7 @@ static long hiddev_ioctl(struct file *file, unsigned int cmd, unsigned long arg)
 
 	/* Called without BKL by compat methods so no BKL taken */
 
-	mutex_lock(&hiddev->existancelock);
+	mutex_lock(&hiddev->existencelock);
 	if (!hiddev->exist) {
 		r = -ENODEV;
 		goto ret_unlock;
@@ -851,7 +851,7 @@ static long hiddev_ioctl(struct file *file, unsigned int cmd, unsigned long arg)
 	}
 
 ret_unlock:
-	mutex_unlock(&hiddev->existancelock);
+	mutex_unlock(&hiddev->existencelock);
 	return r;
 }
 
@@ -916,7 +916,7 @@ int hiddev_connect(struct hid_device *hid, unsigned int force)
 	init_waitqueue_head(&hiddev->wait);
 	INIT_LIST_HEAD(&hiddev->list);
 	spin_lock_init(&hiddev->list_lock);
-	mutex_init(&hiddev->existancelock);
+	mutex_init(&hiddev->existencelock);
 	hid->hiddev = hiddev;
 	hiddev->hid = hid;
 	hiddev->exist = 1;
@@ -951,15 +951,15 @@ void hiddev_disconnect(struct hid_device *hid)
 
 	usb_deregister_dev(usbhid->intf, &hiddev_class);
 
-	mutex_lock(&hiddev->existancelock);
+	mutex_lock(&hiddev->existencelock);
 	hiddev->exist = 0;
 
 	if (hiddev->open) {
-		mutex_unlock(&hiddev->existancelock);
+		mutex_unlock(&hiddev->existencelock);
 		hid_hw_close(hiddev->hid);
 		wake_up_interruptible(&hiddev->wait);
 	} else {
-		mutex_unlock(&hiddev->existancelock);
+		mutex_unlock(&hiddev->existencelock);
 		kfree(hiddev);
 	}
 }

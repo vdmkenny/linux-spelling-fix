@@ -283,7 +283,7 @@ static bool gen11_reset_one_iir(struct drm_i915_private * const i915,
 
 		/*
 		 * We locked GT INT DW by reading it. If we want to (try
-		 * to) recover from this succesfully, we need to clear
+		 * to) recover from this successfully, we need to clear
 		 * our bit, otherwise we are locking the register for
 		 * everybody.
 		 */

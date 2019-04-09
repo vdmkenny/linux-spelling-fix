@@ -778,7 +778,7 @@ static int vcn_v1_0_start_spg_mode(struct amdgpu_device *adev)
 	/* disable clock gating */
 	vcn_v1_0_disable_clock_gating(adev);
 
-	/* disable interupt */
+	/* disable interrupt */
 	WREG32_P(SOC15_REG_OFFSET(UVD, 0, mmUVD_MASTINT_EN), 0,
 			~UVD_MASTINT_EN__VCPU_EN_MASK);
 
@@ -975,7 +975,7 @@ static int vcn_v1_0_start_dpg_mode(struct amdgpu_device *adev)
 	tmp |= UVD_VCPU_CNTL__MIF_WR_LOW_THRESHOLD_BP_MASK;
 	WREG32_SOC15_DPG_MODE(UVD, 0, mmUVD_VCPU_CNTL, tmp, 0xFFFFFFFF, 0);
 
-	/* disable interupt */
+	/* disable interrupt */
 	WREG32_SOC15_DPG_MODE(UVD, 0, mmUVD_MASTINT_EN,
 			0, UVD_MASTINT_EN__VCPU_EN_MASK, 0);
 

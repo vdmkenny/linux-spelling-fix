@@ -89,7 +89,7 @@ static void __init imx3_init_l2x0(void)
 
 /*
  * First of all, we must repair broken chip settings. There are some
- * i.MX35 CPUs in the wild, comming with bogus L2 cache settings. These
+ * i.MX35 CPUs in the wild, coming with bogus L2 cache settings. These
  * misconfigured CPUs will run amok immediately when the L2 cache gets enabled.
  * Workaraound is to setup the correct register setting prior enabling the
  * L2 cache. This should not hurt already working CPUs, as they are using the

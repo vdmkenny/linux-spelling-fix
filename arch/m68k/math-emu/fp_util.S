@@ -1012,7 +1012,7 @@ fp_ns_huge:
 	| fp_normalize_single_fast:
 	| normalize an extended with single (23-bit) precision
 	| this is only used by fsgldiv/fsgdlmul, where the
-	| operand is not completly normalized.
+	| operand is not completely normalized.
 	| args:	 %a0 (struct fp_ext *)
 
 fp_normalize_single_fast:

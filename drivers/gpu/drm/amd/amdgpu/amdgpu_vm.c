@@ -688,7 +688,7 @@ void amdgpu_vm_move_to_lru_tail(struct amdgpu_device *adev,
  * @validate: callback to do the validation
  * @param: parameter for the validation callback
  *
- * Validate the page table BOs on command submission if neccessary.
+ * Validate the page table BOs on command submission if necessary.
  *
  * Returns:
  * Validation result.

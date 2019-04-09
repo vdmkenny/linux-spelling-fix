@@ -203,7 +203,7 @@ void rt2x00link_update_stats(struct rt2x00_dev *rt2x00dev,
 		return;
 
 	/*
-	 * Frame was received successfully since non-succesfull
+	 * Frame was received successfully since non-successfull
 	 * frames would have been dropped by the hardware.
 	 */
 	qual->rx_success++;

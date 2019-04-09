@@ -767,7 +767,7 @@ split_bpf_config_terms(struct list_head *evt_head_config,
 	/*
 	 * Currectly, all possible user config term
 	 * belong to bpf object. parse_events__is_hardcoded_term()
-	 * happends to be a good flag.
+	 * happeneds to be a good flag.
 	 *
 	 * See parse_events_config_bpf() and
 	 * config_term_tracepoint().

@@ -1534,7 +1534,7 @@ snic_send_abort_and_wait(struct snic *snic, struct scsi_cmnd *sc)
 	 * If the command is already completed by fw_cmpl code,
 	 * we just return SUCCESS from here. This means that the abort
 	 * succeeded. In the SCSI ML, since the timeout for command has
-	 * happend, the completion wont actually complete the command
+	 * happened, the completion wont actually complete the command
 	 * and it will be considered as an aborted command
 	 *
 	 * The CMD_SP will not be cleared except while holding io_lock

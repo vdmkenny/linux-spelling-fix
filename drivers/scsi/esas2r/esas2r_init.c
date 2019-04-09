@@ -699,7 +699,7 @@ int esas2r_resume(struct pci_dev *pdev)
 		goto error_exit;
 	}
 
-	/* Set up interupt mode */
+	/* Set up interrupt mode */
 	esas2r_setup_interrupts(a, a->intr_mode);
 
 	/*

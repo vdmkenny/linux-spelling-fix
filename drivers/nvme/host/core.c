@@ -1897,7 +1897,7 @@ int nvme_enable_ctrl(struct nvme_ctrl *ctrl, u64 cap)
 {
 	/*
 	 * Default to a 4K page size, with the intention to update this
-	 * path in the future to accomodate architectures with differing
+	 * path in the future to accommodate architectures with differing
 	 * kernel and IO page sizes.
 	 */
 	unsigned dev_page_min = NVME_CAP_MPSMIN(cap) + 12, page_shift = 12;

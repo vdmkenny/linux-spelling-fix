@@ -1170,7 +1170,7 @@ isdn_net_start_xmit(struct sk_buff *skb, struct net_device *ndev)
 	struct concap_proto *cprot = lp->netdev->cprot;
 /* At this point hard_start_xmit() passes control to the encapsulation
    protocol (if present).
-   For X.25 auto-dialing is completly bypassed because:
+   For X.25 auto-dialing is completely bypassed because:
    - It does not conform with the semantics of a reliable datalink
    service as needed by X.25 PLP.
    - I don't want that the interface starts dialing when the network layer

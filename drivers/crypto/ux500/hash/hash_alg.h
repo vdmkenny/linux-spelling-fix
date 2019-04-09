@@ -220,7 +220,7 @@ struct hash_register {
  * @bit_index:	Valid number of bits in buffer (N % 8).
  *
  * This structure is used between context switches, i.e. when ongoing jobs are
- * interupted with new jobs. When this happens we need to store intermediate
+ * interrupted with new jobs. When this happens we need to store intermediate
  * results in software.
  *
  * WARNING: "index" is the  member of the structure, to be sure  that "buffer"

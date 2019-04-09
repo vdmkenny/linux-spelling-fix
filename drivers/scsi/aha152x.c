@@ -52,7 +52,7 @@
  * - fix for data out w/o scatter gather
  *
  * Revision 2.0  1999/12/25 15:07:32  fischer
- * - interrupt routine completly reworked
+ * - interrupt routine completely reworked
  * - basic support for new eh code
  *
  * Revision 1.21  1999/11/10 23:46:36  fischer

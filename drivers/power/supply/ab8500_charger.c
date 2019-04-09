@@ -169,7 +169,7 @@ enum ab8500_usb_state {
 	struct ab8500_charger, ac_chg)
 
 /**
- * struct ab8500_charger_interrupts - ab8500 interupts
+ * struct ab8500_charger_interrupts - ab8500 interrupts
  * @name:	name of the interrupt
  * @isr		function pointer to the isr
  */

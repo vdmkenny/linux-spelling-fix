@@ -2092,7 +2092,7 @@ static long do_semtimedop(int semid, struct sembuf __user *tsops,
 	queue.dupsop = dupsop;
 
 	error = perform_atomic_semop(sma, &queue);
-	if (error == 0) { /* non-blocking succesfull path */
+	if (error == 0) { /* non-blocking successfull path */
 		DEFINE_WAKE_Q(wake_q);
 
 		/*

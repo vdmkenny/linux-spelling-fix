@@ -204,7 +204,7 @@ enum {
  * notification the status is always success. There is no start/end fragment
  * notification for monolithic events.
  *
- * @TE_V2_DEFAULT_POLICY: independent, social, present, unoticable
+ * @TE_V2_DEFAULT_POLICY: independent, social, present, unoticeable
  * @TE_V2_NOTIF_HOST_EVENT_START: request/receive notification on event start
  * @TE_V2_NOTIF_HOST_EVENT_END:request/receive notification on event end
  * @TE_V2_NOTIF_INTERNAL_EVENT_START: internal FW use

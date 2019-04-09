@@ -186,7 +186,7 @@ void __ndisc_fill_addr_option(struct sk_buff *skb, int type, void *data,
  *			       struct in6_addr *addr,
  *			       int addr_type, u32 addr_flags,
  *			       bool sllao, bool tokenized,
- *			       __u32 valid_lft, u32 prefered_lft,
+ *			       __u32 valid_lft, u32 preferred_lft,
  *			       bool dev_addr_generated):
  *     This function is called when a RA messages is received with valid
  *     PIO option fields and an IPv6 address will be added to the interface
@@ -215,7 +215,7 @@ struct ndisc_ops {
 				       struct in6_addr *addr,
 				       int addr_type, u32 addr_flags,
 				       bool sllao, bool tokenized,
-				       __u32 valid_lft, u32 prefered_lft,
+				       __u32 valid_lft, u32 preferred_lft,
 				       bool dev_addr_generated);
 };
 
@@ -295,7 +295,7 @@ static inline void ndisc_ops_prefix_rcv_add_addr(struct net *net,
 						 int addr_type, u32 addr_flags,
 						 bool sllao, bool tokenized,
 						 __u32 valid_lft,
-						 u32 prefered_lft,
+						 u32 preferred_lft,
 						 bool dev_addr_generated)
 {
 	if (dev->ndisc_ops && dev->ndisc_ops->prefix_rcv_add_addr)
@@ -303,7 +303,7 @@ static inline void ndisc_ops_prefix_rcv_add_addr(struct net *net,
 						    addr, addr_type,
 						    addr_flags, sllao,
 						    tokenized, valid_lft,
-						    prefered_lft,
+						    preferred_lft,
 						    dev_addr_generated);
 }
 #endif

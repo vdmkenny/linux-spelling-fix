@@ -152,7 +152,7 @@ static void brcmf_btcoex_boost_wifi(struct brcmf_btcoex_info *btci,
 	struct brcmf_if *ifp = brcmf_get_ifp(btci->cfg->pub, 0);
 
 	if (trump_sco && !btci->saved_regs_part2) {
-		/* this should reduce eSCO agressive
+		/* this should reduce eSCO aggressive
 		 * retransmit w/o breaking it
 		 */
 

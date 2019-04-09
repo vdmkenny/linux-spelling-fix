@@ -2908,10 +2908,10 @@ static int b43_gpio_init(struct b43_wldev *dev)
 		b43_write16(dev, B43_MMIO_GPIO_MASK,
 			    b43_read16(dev, B43_MMIO_GPIO_MASK)
 			    | 0x0100);
-		/* BT Coexistance Input */
+		/* BT Coexistence Input */
 		mask |= 0x0080;
 		set |= 0x0080;
-		/* BT Coexistance Out */
+		/* BT Coexistence Out */
 		mask |= 0x0100;
 		set |= 0x0100;
 	}

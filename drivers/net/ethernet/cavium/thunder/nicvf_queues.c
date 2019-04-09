@@ -180,7 +180,7 @@ static inline int nicvf_alloc_rcv_buffer(struct nicvf *nic, struct rbdr *rbdr,
 {
 	struct pgcache *pgcache = NULL;
 
-	/* Check if request can be accomodated in previous allocated page.
+	/* Check if request can be accommodated in previous allocated page.
 	 * But in XDP mode only one buffer per page is permitted.
 	 */
 	if (!rbdr->is_xdp && nic->rb_page &&

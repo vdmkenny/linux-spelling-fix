@@ -601,7 +601,7 @@ static int pn533_send_sync_complete(struct pn533 *dev, void *_arg,
  *     as it's been already freed at the beginning of RX path by
  *     async_complete_cb.
  *
- *  3. valid pointer in case of succesfult RX path
+ *  3. valid pointer in case of successfult RX path
  *
  *  A caller has to check a return value with IS_ERR macro. If the test pass,
  *  the returned pointer is valid.

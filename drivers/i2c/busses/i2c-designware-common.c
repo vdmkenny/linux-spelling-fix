@@ -342,7 +342,7 @@ void i2c_dw_disable(struct dw_i2c_dev *dev)
 	/* Disable controller */
 	__i2c_dw_disable(dev);
 
-	/* Disable all interupts */
+	/* Disable all interrupts */
 	dw_writel(dev, 0, DW_IC_INTR_MASK);
 	dw_readl(dev, DW_IC_CLR_INTR);
 }

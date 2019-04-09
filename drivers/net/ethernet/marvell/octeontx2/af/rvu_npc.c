@@ -1408,7 +1408,7 @@ npc_get_mcam_search_range_priority(struct npc_mcam *mcam,
 	 * - If reference entry is not in hprio zone then
 	 *      search range: ref_entry to end.
 	 * - If reference entry is in hprio zone and if
-	 *   request can be accomodated in non-hprio zone then
+	 *   request can be accommodated in non-hprio zone then
 	 *      search range: 'start of middle zone' to 'end'
 	 * - else search in reverse, so that less number of hprio
 	 *   zone entries are allocated.
@@ -1435,7 +1435,7 @@ hprio:
 	 * - If reference entry is not in lprio zone then
 	 *      search range: 0 to ref_entry.
 	 * - If reference entry is in lprio zone and if
-	 *   request can be accomodated in middle zone then
+	 *   request can be accommodated in middle zone then
 	 *      search range: 'hprio_end' to 'lprio_start'
 	 */
 
@@ -1507,7 +1507,7 @@ static int npc_mcam_alloc_entries(struct npc_mcam *mcam, u16 pcifunc,
 	hp_fcnt = npc_mcam_get_free_count(mcam->bmap, 0, mcam->hprio_end);
 	fcnt = mcam->bmap_fcnt - lp_fcnt - hp_fcnt;
 
-	/* Check if request can be accomodated in the middle zone */
+	/* Check if request can be accommodated in the middle zone */
 	if (fcnt > req->count) {
 		start = mcam->hprio_end;
 		end = mcam->lprio_start;

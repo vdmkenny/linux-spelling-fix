@@ -296,7 +296,7 @@ ENTRY(ret_from_exception)
 
 ENTRY(ret_from_interrupt)
 	;;
-	;; Check if we are comming from user mode.
+	;; Check if we are coming from user mode.
 	;;
 	LDW	.D2T2	*+SP(REGS_TSR+8),B0
 	MVK	.S2	0x40,B1

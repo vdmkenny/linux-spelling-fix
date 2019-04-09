@@ -131,7 +131,7 @@ struct pmu_domain {
  * This deals with the "old" Marvell sequence of bringing a power domain
  * down/up, which is: apply power, release reset, disable isolators.
  *
- * Later devices apparantly use a different sequence: power up, disable
+ * Later devices apparently use a different sequence: power up, disable
  * isolators, assert repair signal, enable SRMA clock, enable AXI clock,
  * enable module clock, deassert reset.
  *

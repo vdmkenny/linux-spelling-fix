@@ -285,7 +285,7 @@ static void intel_atomic_setup_scaler(struct intel_crtc_scaler_state *scaler_sta
  * not being part of this atomic state
  *
  *  Returns:
- *         0 - scalers were setup succesfully
+ *         0 - scalers were setup successfully
  *         error code - otherwise
  */
 int intel_atomic_setup_scalers(struct drm_i915_private *dev_priv,

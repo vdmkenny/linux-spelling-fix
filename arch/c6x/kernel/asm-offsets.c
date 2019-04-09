@@ -104,7 +104,7 @@ void foo(void)
 	OFFSET(THREAD_INFO_PREEMPT_COUNT, thread_info, preempt_count);
 	BLANK();
 
-	/* These would be unneccessary if we ran asm files
+	/* These would be unnecessary if we ran asm files
 	 * through the preprocessor.
 	 */
 	DEFINE(KTHREAD_SHIFT, THREAD_SHIFT);

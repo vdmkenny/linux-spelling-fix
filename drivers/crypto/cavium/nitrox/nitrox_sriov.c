@@ -132,7 +132,7 @@ static int nitrox_sriov_init(struct nitrox_device *ndev)
 	int ret;
 
 	/* register interrupts for PF in SR-IOV */
-	ret = nitrox_sriov_register_interupts(ndev);
+	ret = nitrox_sriov_register_interrupts(ndev);
 	if (ret)
 		return ret;
 

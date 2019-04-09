@@ -155,7 +155,7 @@ static inline unsigned long  ___tlbie(unsigned long vpn, int psize,
 	 * We need 14 to 65 bits of va for a tlibe of 4K page
 	 * With vpn we ignore the lower VPN_SHIFT bits already.
 	 * And top two bits are already ignored because we can
-	 * only accomodate 76 bits in a 64 bit vpn with a VPN_SHIFT
+	 * only accommodate 76 bits in a 64 bit vpn with a VPN_SHIFT
 	 * of 12.
 	 */
 	va = vpn << VPN_SHIFT;

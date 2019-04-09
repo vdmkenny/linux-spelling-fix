@@ -1243,7 +1243,7 @@ static int pxa168_rx_poll(struct napi_struct *napi, int budget)
 	int work_done = 0;
 
 	/*
-	 * We call txq_reclaim every time since in NAPI interupts are disabled
+	 * We call txq_reclaim every time since in NAPI interrupts are disabled
 	 * and due to this we miss the TX_DONE interrupt,which is not updated in
 	 * interrupt status register.
 	 */
